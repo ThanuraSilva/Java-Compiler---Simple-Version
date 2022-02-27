@@ -21,7 +21,7 @@
          <font>
             <Font size="17.0" />
          </font></TextArea>
-      <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="379.0" layoutY="862.0" onAction="#btnExit_OnAction" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #e67e22;" styleClass="btn-exit" text="Exit" textFill="WHITE">
+      <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="379.0" layoutY="862.0" onAction="#btnExit_OnAction" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #38ada9;" styleClass="btn-exit" text="Exit" textFill="WHITE">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
