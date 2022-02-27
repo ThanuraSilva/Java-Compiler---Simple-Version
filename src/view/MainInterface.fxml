@@ -14,7 +14,7 @@
 <AnchorPane fx:id="uiJavaCompiler" prefHeight="927.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainInterfaceControl">
    <children>
       <TextArea fx:id="txtInput" layoutX="14.0" layoutY="193.0" prefHeight="434.0" prefWidth="917.0" promptText="Enter your code " />
-      <TextArea fx:id="txtOutput" layoutX="14.0" layoutY="644.0" prefHeight="200.0" prefWidth="917.0" promptText="Execute Output" />
+      <TextArea fx:id="txtOutput" editable="false" layoutX="14.0" layoutY="644.0" prefHeight="200.0" prefWidth="917.0" promptText="Execute Output" />
       <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="379.0" layoutY="862.0" onAction="#btnExit_OnAction" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #e67e22;" text="Exit" textFill="WHITE">
          <font>
             <Font size="17.0" />
@@ -36,20 +36,21 @@
          </font>
       </JFXButton>
       <JFXToggleButton fx:id="tglAdvancedMode" layoutX="587.0" layoutY="32.0" onAction="#tglAdvancedMode_OnAction" text="Advanced Mode" />
-      <Label fx:id="lblModeSelect" layoutX="533.0" layoutY="82.0" prefHeight="34.0" prefWidth="236.0" text="Easy Mode Activated" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblModeSelect" layoutX="490.0" layoutY="82.0" prefHeight="34.0" prefWidth="285.0" text="Easy Mode Activated" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <Button fx:id="btnCopy" layoutX="97.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnCopy_OnAction" text="Copy" />
-      <Button fx:id="btnCut_OnAction" layoutX="163.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnCut_OnAction" text="Cut" />
-      <Button fx:id="btnPaste" layoutX="223.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnPaste_OnAction" text="Paste" />
-      <Button fx:id="btnSelectAll" layoutX="363.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnSelectAll_OnAction" text="Select All" />
-      <Button fx:id="btnSave" layoutX="30.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnSave_OnAction" text="Save" />
+      <Button fx:id="btnCopy" layoutX="134.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnCopy_OnAction" text="Copy" />
+      <Button fx:id="btnCut_OnAction" layoutX="196.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnCut_OnAction" text="Cut" />
+      <Button fx:id="btnPaste" layoutX="253.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnPaste_OnAction" text="Paste" />
+      <Button fx:id="btnSelectAll" layoutX="388.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnSelectAll_OnAction" text="Select All" />
+      <Button fx:id="btnSave" layoutX="75.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnSave_OnAction" text="Save" />
       <Separator layoutX="31.0" layoutY="61.0" prefHeight="3.0" prefWidth="559.0" />
-      <Label layoutX="772.0" layoutY="871.0" prefHeight="34.0" prefWidth="116.0" text="Total Characters" textAlignment="CENTER" wrapText="true" />
-      <Label fx:id="lblTotCharacters" layoutX="887.0" layoutY="852.0" prefHeight="34.0" prefWidth="41.0" text="0" textAlignment="CENTER" wrapText="true" />
-      <Button fx:id="btnDelete" layoutX="293.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnDelete_OnAction" text="Delete" />
+      <Label layoutX="741.0" layoutY="852.0" prefHeight="34.0" prefWidth="116.0" text="Total Characters:" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="lblTotCharacters" layoutX="862.0" layoutY="852.0" prefHeight="34.0" prefWidth="41.0" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="btnDelete" layoutX="318.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnDelete_OnAction" text="Delete" />
       <TextField fx:id="txtMainClass" layoutX="15.0" layoutY="147.0" prefHeight="26.0" prefWidth="200.0" promptText="Main Class" />
+      <Button fx:id="btnOpen" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnOpen_OnAction" text="Open" />
    </children>
 </AnchorPane>
