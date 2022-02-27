@@ -1,0 +1,48 @@
+.btn-exit {
+    -fx-border-radius: 20px;
+
+}
+
+.btn-run {
+    -fx-border-radius: 20px;
+}
+
+.btn-reset {
+    -fx-border-radius: 20px;
+}
+
+.btn-copy {
+    -fx-graphic: url(../assets/copy.png);
+    -fx-background-color: transparent;
+}
+
+.btn-cut {
+    -fx-graphic: url(../assets/cut.png);
+    -fx-background-color: transparent;
+}
+
+.btn-paste {
+    -fx-graphic: url(../assets/paste.png);
+    -fx-background-color: transparent;
+}
+
+.btn-selectAll {
+    -fx-graphic: url(../assets/selectAll.png);
+    -fx-background-color: transparent;
+}
+
+.btn-save {
+    -fx-graphic: url(../assets/save.png);
+    -fx-background-color: transparent;
+}
+
+.btn-open {
+    -fx-graphic: url(../assets/open.png);
+    -fx-background-color: transparent;
+}
+
+.btn-delete {
+    -fx-graphic: url(../assets/delete-button.png);
+    -fx-background-color: transparent;
+}
+
