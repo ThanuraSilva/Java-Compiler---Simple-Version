@@ -6,8 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
-
-import javax.management.StandardEmitterMBean;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,7 +25,6 @@ public class MainInterfaceControl {
     public MenuButton mnuBtnAbout;
     public Label lblModeSelect;
     public Button btnCopy;
-    public Button btnCut_OnAction;
     public Button btnPaste;
     public Button btnSelectAll;
     public Button btnSave;
@@ -39,6 +36,7 @@ public class MainInterfaceControl {
     public JFXToggleButton tglAdvancedMode;
     public TextField txtMainClass;
     public Button btnOpen;
+    public Button btnCut;
 
 
     public void initialize(){
@@ -192,7 +190,6 @@ public class MainInterfaceControl {
         txtOutput.clear();
 
     }
-
 
     public void btnCopy_OnAction(ActionEvent actionEvent) {
         txtInput.copy();
