@@ -6,6 +6,9 @@ Here introduce a simple compiler of the Java programming language as mentioned i
 
 This application is developed to get hands-on skills in Java programming language with JavaFX library. Here especially emphasized Process handling and I/O operation of Java programming language.
 
+![This is image](./src/assets/ScreenViewNew1.png);
+![This is image](./src/assets/ScreenViewNew2.png);
+
 ## Functioning
 
 Especially here embedded two modes as Easy and Advanced. When you stay in Easy Mode, it is unnecessary to add conventional code blocks as the class name and the main method. Those will automatically be added when the compile stage.
