@@ -17,8 +17,9 @@ public class AppInitializer extends Application {
         AnchorPane root = FXMLLoader.load(this.getClass().getResource("view/MainInterface.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Simple Java Compiler");
+        primaryStage.setTitle("Simple Compiler for Java - V 0.1.0");
         primaryStage.centerOnScreen();
+        primaryStage.setResizable(false);
         primaryStage.show();
 
 

@@ -108,10 +108,6 @@ public class MainInterfaceControl {
 
         exit.setOnAction(this::btnExit_OnAction);
 
-
-
-        //todo: new,exit,
-
         txtInput.textProperty().addListener((observable, oldValue, newValue) -> {
             characterCount();
         });
@@ -134,16 +130,16 @@ public class MainInterfaceControl {
     public void tglAdvancedMode_OnAction(ActionEvent actionEvent) {
         if(tglAdvancedMode.isSelected()){
 
-            lblModeSelect.setText("Advanced Mode Activated");
+            lblModeSelect.setText("Advanced Mode");
 
         }else {
-            lblModeSelect.setText("Easy Mode Activated");
+            lblModeSelect.setText("Easy Mode");
 
         }
     }
 
     public void btnAddClass_OnAction(ActionEvent actionEvent) {
-        if(!lblModeSelect.getText().equals("Easy Mode Activated")){
+        if(!lblModeSelect.getText().equals("Easy Mode")){
             String className = "public class "+txtMainClass.getText()+"{\n" +
                        "\n"+
                     "}";
@@ -156,7 +152,7 @@ public class MainInterfaceControl {
 
         String main =txtMainClass.getText();
 
-        if(lblModeSelect.getText().equals("Easy Mode Activated")){
+        if(lblModeSelect.getText().equals("Easy Mode")){
 
             String command = "public class " + main+ "{\n" +
                         "public static void main(String args[]){\n"+
@@ -165,7 +161,7 @@ public class MainInterfaceControl {
                         "}";
             javaRun(command,main);
 
-        }else if (lblModeSelect.getText().equals("Advanced Mode Activated")){
+        }else if (lblModeSelect.getText().equals("Advanced Mode")){
 
             String code = txtInput.getText();
             javaRun(code,main);
