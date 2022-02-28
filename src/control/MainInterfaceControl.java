@@ -37,6 +37,7 @@ public class MainInterfaceControl {
     public TextField txtMainClass;
     public Button btnOpen;
     public Button btnCut;
+    public JFXButton btnAddClass;
 
 
     public void initialize(){
@@ -73,6 +74,7 @@ public class MainInterfaceControl {
         paste.setOnAction(this::btnPaste_OnAction);
         select_all.setOnAction(this::btnSelectAll_OnAction);
         open.setOnAction(this::btnOpen_OnAction);
+        anew.setOnAction(this::btnReset_OnAction);
 
         wrapText.setOnAction(event -> {
             txtInput.setWrapText(true);
@@ -80,7 +82,9 @@ public class MainInterfaceControl {
 
         exit.setOnAction(this::btnExit_OnAction);
 
-        //todo: new, save, about,exit,wrapText
+
+
+        //todo: new, , about,exit,
 
         txtInput.textProperty().addListener((observable, oldValue, newValue) -> {
             characterCount();
@@ -103,12 +107,24 @@ public class MainInterfaceControl {
 
     public void tglAdvancedMode_OnAction(ActionEvent actionEvent) {
         if(tglAdvancedMode.isSelected()){
+
             lblModeSelect.setText("Advanced Mode Activated");
+
         }else {
             lblModeSelect.setText("Easy Mode Activated");
 
         }
     }
+
+    public void btnAddClass_OnAction(ActionEvent actionEvent) {
+        if(!lblModeSelect.getText().equals("Easy Mode Activated")){
+            String className = "public class "+txtMainClass.getText()+"{\n" +
+                       "\n"+
+                    "}";
+            txtInput.setText(className);
+        }
+    }
+
 
     public void btnRun_OnAction(ActionEvent actionEvent) throws IOException {
 
@@ -124,6 +140,7 @@ public class MainInterfaceControl {
             javaRun(command,main);
 
         }else if (lblModeSelect.getText().equals("Advanced Mode Activated")){
+
             String code = txtInput.getText();
             javaRun(code,main);
 
@@ -165,6 +182,7 @@ public class MainInterfaceControl {
 
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
+
         }finally {
             Path classPath = Paths.get(System.getProperty("java.io.tmpdir"), main+".class");
             Path javaPath = Paths.get(System.getProperty("java.io.tmpdir"), main+".java");
@@ -259,19 +277,5 @@ public class MainInterfaceControl {
 
 
     }
-
-    public void mnuBtnExtra_OnAction(ActionEvent actionEvent) {
-    }
-
-    public void mnuBtnEdit_OnAction(ActionEvent actionEvent) {
-    }
-
-    public void mnuBtnFile_OnAction(ActionEvent actionEvent) {
-    }
-
-    public void mnuBtnAbout_OnAction(ActionEvent actionEvent) {
-    }
-
-
 
 }

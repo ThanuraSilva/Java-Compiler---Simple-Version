@@ -27,19 +27,19 @@
          </font>
       </JFXButton>
       <Separator layoutX="14.0" layoutY="126.0" prefHeight="3.0" prefWidth="917.0" />
-      <MenuButton fx:id="mnuBtnFile" layoutX="26.0" layoutY="22.0" mnemonicParsing="false" onAction="#mnuBtnFile_OnAction" style="-fx-background-color: #575fcf;" text="File" textFill="WHITE">
+      <MenuButton fx:id="mnuBtnFile" layoutX="26.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #575fcf;" text="File" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></MenuButton>
-      <MenuButton fx:id="mnuBtnEdit" layoutX="99.0" layoutY="22.0" mnemonicParsing="false" onAction="#mnuBtnEdit_OnAction" style="-fx-background-color: #575fcf;" text="Edit" textFill="WHITE">
+      <MenuButton fx:id="mnuBtnEdit" layoutX="99.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #575fcf;" text="Edit" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></MenuButton>
-      <MenuButton fx:id="mnuBtnExtra" layoutX="174.0" layoutY="22.0" mnemonicParsing="false" onAction="#mnuBtnExtra_OnAction" style="-fx-background-color: #575fcf;" text="Extra" textFill="WHITE">
+      <MenuButton fx:id="mnuBtnExtra" layoutX="174.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #575fcf;" text="Extra" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></MenuButton>
-      <MenuButton fx:id="mnuBtnAbout" layoutX="259.0" layoutY="22.0" mnemonicParsing="false" onAction="#mnuBtnAbout_OnAction" style="-fx-background-color: #575fcf;" text="About" textFill="WHITE">
+      <MenuButton fx:id="mnuBtnAbout" layoutX="259.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #575fcf;" text="About" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></MenuButton>
@@ -103,5 +103,6 @@
          <font>
             <Font size="12.0" />
          </font></Button>
+      <JFXButton fx:id="btnAddClass" buttonType="RAISED" layoutX="226.0" layoutY="146.0" onAction="#btnAddClass_OnAction" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: #f0932b;" text="Add Class" textFill="WHITE" />
    </children>
 </AnchorPane>
