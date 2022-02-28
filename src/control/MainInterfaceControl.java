@@ -3,13 +3,19 @@ package control;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXToggleButton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -67,7 +73,6 @@ public class MainInterfaceControl {
         mnuBtnExtra.getItems().add(exit);
         mnuBtnExtra.getItems().add(wrapText);
 
-
         save.setOnAction(this::btnSave_OnAction);
         copy.setOnAction(this::btnCopy_OnAction);
         cut.setOnAction(this::btnCut_OnAction);
@@ -75,6 +80,24 @@ public class MainInterfaceControl {
         select_all.setOnAction(this::btnSelectAll_OnAction);
         open.setOnAction(this::btnOpen_OnAction);
         anew.setOnAction(this::btnReset_OnAction);
+        about.setOnAction(event -> {
+
+            try {
+                URL root = getClass().getResource("../view/About_interface.fxml");
+                Parent load = FXMLLoader.load(root);
+                Scene scene = new Scene(load);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.setTitle("About");
+                stage.centerOnScreen();
+                stage.setResizable(false);
+                stage.show();
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+        });
 
         wrapText.setOnAction(event -> {
             txtInput.setWrapText(true);
@@ -84,7 +107,7 @@ public class MainInterfaceControl {
 
 
 
-        //todo: new, , about,exit,
+        //todo: new,exit,
 
         txtInput.textProperty().addListener((observable, oldValue, newValue) -> {
             characterCount();

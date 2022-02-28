@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="consoleAbout" prefHeight="670.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AboutInterfaceControl">
+   <children>
+      <Label layoutX="440.0" layoutY="31.0" text="Simple Compiler">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="599.0" layoutY="70.0" text="for JAVA">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="14.0" layoutY="139.0" prefHeight="519.0" prefWidth="741.0" text="About Simple Compiler for JAVA  -  V 0.1.0&#10;&#10;This small application applied Java programming language techniques with JavaFX API. Especially here embedded two modes as Easy and Advanced. When Easy Mode, it is no need to add  &#10;conventional code blocks as class name and the main method.  Those will automatically be added when the compile stage.&#10;&#10;If you select Advance mode, it should be input the code data as it is Java syntax. &#10;In both modes, your preferred name of the main class should be inserted through a given text field at the program interface.&#10;&#10;This application here developed to get hands-on skills in Java programming language with JavaFX API. Here especially emphasized Process handling and I/O operation of Java programming language.&#10;&#10;The program is licensed under MIT license.&#10;&#10; &#10;Copyright © Thanura Silva 2021 - Present - All Rights Reserved&#10; " wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font></TextArea>
+      <ImageView fitHeight="115.0" fitWidth="147.0" layoutX="310.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/toAboutScreen.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="630.0" layoutY="103.0" text="V 0.1.0">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
