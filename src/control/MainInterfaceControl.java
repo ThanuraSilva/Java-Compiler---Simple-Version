@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -19,6 +21,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Optional;
 
 
 public class MainInterfaceControl {
@@ -289,15 +292,23 @@ public class MainInterfaceControl {
     }
 
     public void btnDelete_OnAction(ActionEvent actionEvent) {
-        //ToDo: develop this as delete only selected
-        txtInput.clear();
+
+        txtInput.replaceSelection("");
+
+
     }
 
     public void btnExit_OnAction(ActionEvent actionEvent) {
-        System.exit(0);
-        //ToDo: develop as to function
-       new Alert(Alert.AlertType.CONFIRMATION, "Are you sure to Exit,", ButtonType.OK, ButtonType.CANCEL).showAndWait();
 
+        Alert.AlertType conf = Alert.AlertType.CONFIRMATION;
+        Alert alert = new Alert(conf, "Are you sure to exit from the program");
+        Optional<ButtonType> btnResponse = alert.showAndWait();
+
+        if (btnResponse.get() == ButtonType.OK){
+            System.exit(0);
+        }else if (btnResponse.get() == ButtonType.CANCEL){
+            alert.close();
+        }
 
     }
 
