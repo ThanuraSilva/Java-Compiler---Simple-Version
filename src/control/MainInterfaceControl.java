@@ -295,7 +295,6 @@ public class MainInterfaceControl {
 
         txtInput.replaceSelection("");
 
-
     }
 
     public void btnExit_OnAction(ActionEvent actionEvent) {
