@@ -20,7 +20,7 @@ Conventional menu buttons, basic typesetting commands (copy, paste, select all â
 
 ## License
 
-The program is licensed under [MIT] license.
+The program is licensed under [MIT](./License.txt) license.
 
 
 Copyright Â© Thanura Silva 2021 - Present - All Rights Reserved
